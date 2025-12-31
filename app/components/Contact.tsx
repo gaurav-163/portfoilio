@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useState, useCallback, useTransition } from 'react';
+import { useState, useRef } from 'react';
 import { Mail, MapPin, Linkedin, Github, Send, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
@@ -11,26 +11,9 @@ export default function Contact() {
     threshold: 0.1,
   });
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
+  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isPending, startTransition] = useTransition();
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    startTransition(() => {
-      setFormData(prev => ({
-        ...prev,
-        [name]: value,
-      }));
-    });
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,7 +33,7 @@ export default function Contact() {
       if (data.success) {
         setIsSubmitting(false);
         setIsSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        form.reset();
         
         // Reset success message after 5 seconds
         setTimeout(() => setIsSubmitted(false), 5000);
@@ -167,7 +150,7 @@ export default function Contact() {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <input type="hidden" name="access_key" value="4052d311-164c-49f2-9fe9-4e09a891adfa" />
                 <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
                 <input type="hidden" name="from_name" value="Portfolio Contact Form" />
@@ -180,8 +163,6 @@ export default function Contact() {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900 dark:text-white"
                     placeholder="Your Name"
@@ -196,8 +177,6 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900 dark:text-white"
                     placeholder="your.email@example.com"
@@ -212,8 +191,6 @@ export default function Contact() {
                     type="text"
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900 dark:text-white"
                     placeholder="What's this about?"
@@ -227,8 +204,6 @@ export default function Contact() {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900 dark:text-white resize-none"
