@@ -24,7 +24,7 @@ export default function JsonLd() {
       addressLocality: "Mumbai",
       addressCountry: "IN",
     },
-    email: "chaudhari.gaurav3710@gmail.com",
+    email: "chaudharigaurav37@gmail.com",
     telephone: "+91-8850873204",
     alumniOf: {
       "@type": "EducationalOrganization",

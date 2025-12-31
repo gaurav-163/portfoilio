@@ -79,7 +79,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <a
-                  href="mailto:chaudhari.gaurav3710@gmail.com"
+                  href="mailto:chaudharigaurav37@gmail.com"
                   className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all group border border-gray-200 dark:border-gray-700"
                 >
                   <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-lg group-hover:scale-110 transition-transform">
@@ -87,7 +87,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                    <p className="text-gray-900 dark:text-white font-medium">chaudhari.gaurav3710@gmail.com</p>
+                    <p className="text-gray-900 dark:text-white font-medium">chaudharigaurav37@gmail.com</p>
                   </div>
                 </a>
 

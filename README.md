@@ -136,7 +136,7 @@ npm run lint     # Run ESLint
 
 ## 🤝 Contact
 
-- **Email**: chaudhari.gaurav3710@gmail.com
+- **Email**: chaudharigaurav37@gmail.com
 - **LinkedIn**: [gaurav-chaudhari-gc](https://linkedin.com/in/gaurav-chaudhari-gc)
 - **GitHub**: [gaurav-chaudhari-gc](https://github.com/gaurav-chaudhari-gc)
 - **Location**: Mumbai, India
