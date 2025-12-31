@@ -32,15 +32,32 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const form = e.target as HTMLFormElement;
+      const formDataToSubmit = new FormData(form);
       
-      // Reset success message after 5 seconds
-      setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1500);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSubmit,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setIsSubmitting(false);
+      alert('Failed to send message. Please try again or email directly.');
+    }
   };
 
   return (
@@ -147,6 +164,10 @@ export default function Contact() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="hidden" name="access_key" value="4052d311-164c-49f2-9fe9-4e09a891adfa" />
+                <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
+                <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+                
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Name
