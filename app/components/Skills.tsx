@@ -18,12 +18,12 @@ const skillCategories = [
     title: 'Generative AI',
     icon: Sparkles,
     skills: [
-      { name: 'LLM Fine-Tuning', level: 95 },
-      { name: 'LoRA/QLoRA', level: 90 },
-      { name: 'RAG', level: 95 },
-      { name: 'LangChain', level: 90 },
-      { name: 'CrewAI', level: 85 },
-      { name: 'Prompt Engineering (CoT)', level: 95 },
+      'LLM Fine-Tuning',
+      'LoRA/QLoRA',
+      'RAG',
+      'LangChain',
+      'CrewAI',
+      'Prompt Engineering (CoT)',
     ],
     color: 'from-purple-500 to-pink-500',
   },
@@ -31,10 +31,10 @@ const skillCategories = [
     title: 'Machine Learning',
     icon: Brain,
     skills: [
-      { name: 'PyTorch', level: 90 },
-      { name: 'Transformers', level: 90 },
-      { name: 'Scikit-Learn', level: 85 },
-      { name: 'Vector Search (FAISS, ChromaDB)', level: 90 },
+      'PyTorch',
+      'Transformers',
+      'Scikit-Learn',
+      'Vector Search (FAISS, ChromaDB)',
     ],
     color: 'from-blue-500 to-cyan-500',
   },
@@ -42,11 +42,11 @@ const skillCategories = [
     title: 'Multimodal AI',
     icon: MessageSquare,
     skills: [
-      { name: 'VAPI', level: 90 },
-      { name: 'Deepgram', level: 85 },
-      { name: 'Sarvam AI', level: 85 },
-      { name: 'TTS', level: 90 },
-      { name: 'ASR', level: 85 },
+      'VAPI',
+      'Deepgram',
+      'Sarvam AI',
+      'TTS',
+      'ASR',
     ],
     color: 'from-green-500 to-emerald-500',
   },
@@ -54,12 +54,12 @@ const skillCategories = [
     title: 'Infrastructure & DevOps',
     icon: Container,
     skills: [
-      { name: 'Python', level: 95 },
-      { name: 'FastAPI', level: 95 },
-      { name: 'Docker', level: 90 },
-      { name: 'Kafka', level: 80 },
-      { name: 'GCP', level: 85 },
-      { name: 'GitHub Actions', level: 85 },
+      'Python',
+      'FastAPI',
+      'Docker',
+      'Kafka',
+      'GCP',
+      'GitHub Actions',
     ],
     color: 'from-orange-500 to-red-500',
   },
@@ -67,10 +67,10 @@ const skillCategories = [
     title: 'Data & Databases',
     icon: Database,
     skills: [
-      { name: 'SQL', level: 85 },
-      { name: 'MongoDB', level: 85 },
-      { name: 'Pandas', level: 90 },
-      { name: 'NumPy', level: 90 },
+      'SQL',
+      'MongoDB',
+      'Pandas',
+      'NumPy',
     ],
     color: 'from-indigo-500 to-purple-500',
   },
@@ -118,26 +118,20 @@ export default function Skills() {
                     </h3>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-2">
                     {category.skills.map((skill, i) => (
-                      <div key={i}>
-                        <div className="flex justify-between mb-1">
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                            {skill.name}
-                          </span>
-                          <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                            {skill.level}%
-                          </span>
-                        </div>
-                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={inView ? { width: `${skill.level}%` } : {}}
-                            transition={{ duration: 1, delay: index * 0.1 + i * 0.05 }}
-                            className={`h-full bg-gradient-to-r ${category.color} rounded-full`}
-                          />
-                        </div>
-                      </div>
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.3, delay: index * 0.1 + i * 0.05 }}
+                        className="flex items-center"
+                      >
+                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mr-3`} />
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          {skill}
+                        </span>
+                      </motion.div>
                     ))}
                   </div>
                 </motion.div>
@@ -156,7 +150,7 @@ export default function Skills() {
               Also Proficient In
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {['openAI API', 'vLLM', 'Unsloth', 'NeML', 'PEFT', 'OpeanAI API', 'Next.js', 'React', 'JavaScript', 'Git', 'Linux'].map((tech, i) => (
+              {['openAI API','Unsloth', 'NeML', 'PEFT', 'OpeanAI API', 'React','Linux'].map((tech, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, scale: 0 }}

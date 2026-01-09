@@ -73,13 +73,13 @@ export default function Hero() {
               sequence={[
                 'AI/ML Engineer',
                 2000,
-                'LLM Fine-Tuning Expert',
+                'LLM Fine-Tuning',
                 2000,
                 'RAG Architect',
                 2000,
                 'Voice AI Developer',
                 2000,
-                'Generative AI Specialist',
+                'Generative AI',
                 2000,
               ]}
               wrapper="span"
@@ -112,7 +112,7 @@ export default function Hero() {
               Get in Touch
             </a>
             <a
-              href="https://github.com/gaurav-chaudhari-gc"
+              href="https://github.com/gaurav-163"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-lg text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all transform hover:scale-105 shadow-lg"
@@ -137,7 +137,7 @@ export default function Hero() {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://github.com/gaurav-chaudhari-gc"
+              href="https://github.com/gaurav-163"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
