@@ -58,16 +58,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white"
+            className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight"
           >
-            Hi, I'm <span className="gradient-text">Gaurav Chaudhari</span>
+            Hi, I'm <span className="gradient-text bg-clip-text">Gaurav Chaudhari</span>
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-2xl md:text-4xl font-semibold mb-8 text-gray-700 dark:text-gray-300 h-20"
+            className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-10 text-gray-700 dark:text-gray-300 h-20 md:h-24"
           >
             <TypeAnimation
               sequence={[
@@ -92,9 +92,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto"
+            className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
           >
-            Software Engineer specializing in Generative AI, building high-performance inference microservices 
+            Software Engineer specializing in <span className="font-medium text-gray-900 dark:text-white">Generative AI</span>, building high-performance inference microservices 
             and scalable voice agent pipelines. Passionate about creating AI solutions that make a real impact.
           </motion.p>
 

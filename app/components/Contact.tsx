@@ -56,10 +56,10 @@ export default function Contact() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 gradient-text">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 gradient-text">
             Get In Touch
           </h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
 
@@ -84,43 +84,43 @@ export default function Contact() {
               <div className="space-y-6">
                 <a
                   href="mailto:chaudharigaurav37@gmail.com"
-                  className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all group border border-gray-200 dark:border-gray-700"
+                  className="flex items-center space-x-4 p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600"
                 >
-                  <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-lg group-hover:scale-110 transition-transform">
-                    <Mail className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <div className="p-4 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                    <p className="text-gray-900 dark:text-white font-medium">chaudharigaurav37@gmail.com</p>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Email</p>
+                    <p className="text-gray-900 dark:text-white font-semibold text-lg">chaudharigaurav37@gmail.com</p>
                   </div>
                 </a>
 
                 <a
                   href="tel:+918850873204"
-                  className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all group border border-gray-200 dark:border-gray-700"
+                  className="flex items-center space-x-4 p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600"
                 >
-                  <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg group-hover:scale-110 transition-transform">
-                    <Mail className="w-6 h-6 text-green-600 dark:text-green-400" />
+                  <div className="p-4 bg-gradient-to-br from-green-500 to-green-600 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
-                    <p className="text-gray-900 dark:text-white font-medium">+91 8850873204</p>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Phone</p>
+                    <p className="text-gray-900 dark:text-white font-semibold text-lg">+91 8850873204</p>
                   </div>
                 </a>
 
-                <div className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
-                  <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
-                    <MapPin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                <div className="flex items-center space-x-4 p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700">
+                  <div className="p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
-                    <p className="text-gray-900 dark:text-white font-medium">Mumbai, India</p>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Location</p>
+                    <p className="text-gray-900 dark:text-white font-semibold text-lg">Mumbai, India</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-6">
-                <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+                <h4 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">
                   Follow Me
                 </h4>
                 <div className="flex space-x-4">
@@ -128,17 +128,17 @@ export default function Contact() {
                     href="https://linkedin.com/in/gaurav-chaudhari-gc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all hover:scale-110 border border-gray-200 dark:border-gray-700"
+                    className="p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 transform"
                   >
-                    <Linkedin className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                    <Linkedin className="w-7 h-7 text-white" />
                   </a>
                   <a
                     href="https://github.com/gaurav-chaudhari-gc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all hover:scale-110 border border-gray-200 dark:border-gray-700"
+                    className="p-4 bg-gradient-to-br from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 transform"
                   >
-                    <Github className="w-6 h-6 text-gray-900 dark:text-white" />
+                    <Github className="w-7 h-7 text-white" />
                   </a>
                 </div>
               </div>
@@ -150,13 +150,13 @@ export default function Contact() {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 space-y-6">
                 <input type="hidden" name="access_key" value="4052d311-164c-49f2-9fe9-4e09a891adfa" />
                 <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
                 <input type="hidden" name="from_name" value="Portfolio Contact Form" />
                 
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 uppercase tracking-wide">
                     Name
                   </label>
                   <input
@@ -164,13 +164,13 @@ export default function Contact() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900 dark:text-white"
+                    className="w-full px-5 py-4 bg-white dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-gray-900 dark:text-white font-medium shadow-sm hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
                     placeholder="Your Name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 uppercase tracking-wide">
                     Email
                   </label>
                   <input
@@ -178,13 +178,13 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900 dark:text-white will-change-contents"
+                    className="w-full px-5 py-4 bg-white dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-gray-900 dark:text-white font-medium shadow-sm hover:border-gray-400 dark:hover:border-gray-500 transition-colors will-change-contents"
                     placeholder="your.email@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 uppercase tracking-wide">
                     Subject
                   </label>
                   <input
@@ -192,13 +192,13 @@ export default function Contact() {
                     id="subject"
                     name="subject"
                     required
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900 dark:text-white"
+                    className="w-full px-5 py-4 bg-white dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-gray-900 dark:text-white font-medium shadow-sm hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
                     placeholder="What's this about?"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 uppercase tracking-wide">
                     Message
                   </label>
                   <textarea
@@ -206,7 +206,7 @@ export default function Contact() {
                     name="message"
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-gray-900 dark:text-white resize-none"
+                    className="w-full px-5 py-4 bg-white dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-gray-900 dark:text-white font-medium resize-none shadow-sm hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
                     placeholder="Tell me about your project or idea..."
                   />
                 </div>
@@ -214,25 +214,25 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting || isSubmitted}
-                  className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 ${
+                  className={`w-full py-5 px-8 rounded-xl font-bold text-white text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center space-x-3 ${
                     isSubmitted
-                      ? 'bg-green-500 hover:bg-green-600'
-                      : 'bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700'
+                      ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700'
+                      : 'bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 hover:from-primary-700 hover:via-purple-700 hover:to-pink-700'
                   } disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none`}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <div className="w-6 h-6 border-3 border-white border-t-transparent rounded-full animate-spin" />
                       <span>Sending...</span>
                     </>
                   ) : isSubmitted ? (
                     <>
-                      <CheckCircle className="w-5 h-5" />
+                      <CheckCircle className="w-6 h-6" />
                       <span>Message Sent!</span>
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5" />
+                      <Send className="w-6 h-6" />
                       <span>Send Message</span>
                     </>
                   )}

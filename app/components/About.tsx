@@ -36,45 +36,45 @@ export default function About() {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 gradient-text"
           >
             About Me
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white leading-tight">
                 Transforming Ideas into Intelligent Solutions
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                 I'm a passionate Software Engineer at <span className="font-semibold text-primary-600 dark:text-primary-400">Anvex AI</span>, 
                 specializing in cutting-edge AI/ML technologies. With expertise in building high-performance inference 
                 microservices using FastAPI and Docker, I've successfully reduced model latency by up to 
-                <span className="font-semibold text-primary-600 dark:text-primary-400"> 2300ms</span> for real-time interactions.
+                <span className="inline-block px-2 py-0.5 mx-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded font-semibold">2300ms</span> for real-time interactions.
               </p>
-              <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                My work spans across various AI domains including <span className="font-semibold">LLM Fine-Tuning</span>, 
-                <span className="font-semibold"> RAG systems</span>, <span className="font-semibold">Voice AI</span>, and 
-                <span className="font-semibold"> Computer Vision</span>. I've implemented server-grade RAG systems that 
-                increased extraction accuracy by <span className="font-semibold text-primary-600 dark:text-primary-400">75%</span> 
-                and fine-tuned models achieving <span className="font-semibold text-primary-600 dark:text-primary-400">92% accuracy</span>.
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                My work spans across various AI domains including <span className="font-semibold text-gray-900 dark:text-white">LLM Fine-Tuning</span>, 
+                <span className="font-semibold text-gray-900 dark:text-white"> RAG systems</span>, <span className="font-semibold text-gray-900 dark:text-white">Voice AI</span>, and 
+                <span className="font-semibold text-gray-900 dark:text-white"> Computer Vision</span>. I've implemented server-grade RAG systems that 
+                increased extraction accuracy by <span className="inline-block px-2 py-0.5 mx-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded font-semibold">75%</span> 
+                and fine-tuned models achieving <span className="inline-block px-2 py-0.5 mx-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded font-semibold">92% accuracy</span>.
               </p>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Currently pursuing my B.E. in <span className="font-semibold">Artificial Intelligence and Data Science</span> 
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                Currently pursuing my B.E. in <span className="font-semibold text-gray-900 dark:text-white">Artificial Intelligence and Data Science</span> 
                 from New Horizon Institute, I'm constantly pushing the boundaries of what's possible with AI, 
-                having won 1st place in a LLM Fine-Tuning Hackathon.
+                having won <span className="inline-block px-2 py-0.5 mx-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded font-semibold">1st place</span> in a LLM Fine-Tuning Hackathon.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <div className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-lg">
-                    <TrendingUp className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <div className="p-4 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Professional Impact</h4>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <h4 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Professional Impact</h4>
+                    <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                       Reduced agent response time by building moderate-grade RAG systems and optimized 
                       inference pipelines. Designed 20+ Chain-of-Thought prompts ensuring deterministic AI behavior.
                     </p>
@@ -82,14 +82,14 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <div className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
-                    <Award className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                  <div className="p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Award className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Achievements</h4>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <h4 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Achievements</h4>
+                    <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                       🏆 1st Place - LablabAI Fine-Tuning Hackathon (LLM Optimization)
                       <br />
                       🎓 Head Technical Secretary, Student Association
