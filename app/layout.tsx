@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'C5iQchA5Qf7Ztuv7P3fbUVVP-BzH6a_z4J_rIe0OKoI',
   },
 };
 
