@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "Gaurav Chaudhari - AI/ML Engineer & Generative AI Specialist",
+    default: "Gaurav Chaudhari - AI/ML Engineer & Generative AI",
     template: "%s | Gaurav Chaudhari"
   },
   description: "Experienced AI/ML Engineer at Anvex AI specializing in Generative AI, LLM Fine-Tuning, RAG Systems, Voice AI, and Computer Vision. Expert in Python, FastAPI, Docker, PyTorch, and Transformers. Based in Mumbai, India.",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Gaurav Chaudhari",
     "AI Engineer",
     "Machine Learning Engineer",
-    "Generative AI Specialist",
+    "Generative AI",
     "Generative AI",
     "LLM Fine-Tuning",
     "RAG Systems",
@@ -34,16 +34,13 @@ export const metadata: Metadata = {
     "FastAPI",
     "Docker",
     "PyTorch",
-    "Next.js",
-    "React",
-    "TypeScript",
     "Mumbai Software Engineer",
     "Anvex AI",
     "Portfolio",
     "Software Engineer Mumbai"
   ],
   authors: [{ name: "Gaurav Chaudhari", url: "https://linkedin.com/in/gaurav-chaudhari-gc" }],
-  creator: "Gaurav Chaudhari",
+  creator: "Gaurav_Chaudhari",
   publisher: "Gaurav Chaudhari",
   metadataBase: new URL('https://gaurav-chaudhari.vercel.app'),
   alternates: {
@@ -54,7 +51,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://gaurav-chaudhari.vercel.app",
     siteName: "Gaurav Chaudhari Portfolio",
-    title: "Gaurav Chaudhari - AI/ML Engineer & Generative AI Specialist",
+    title: "Gaurav Chaudhari - AI/ML Engineer & Generative AI",
     description: "Experienced AI/ML Engineer at Anvex AI specializing in Generative AI, LLM Fine-Tuning, RAG Systems, Voice AI, and Computer Vision. Expert in Python, FastAPI, Docker, PyTorch, and Transformers.",
     images: [
       {
@@ -69,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gaurav Chaudhari - AI/ML Engineer & Generative AI Specialist",
     description: "AI/ML Engineer specializing in Generative AI, LLM Fine-Tuning, RAG Systems, Voice AI, and Computer Vision",
-    creator: "@gaurav_gc",
+    creator: "@Gaurav_Chaudhari",
     images: ["/og-image.png"],
   },
   robots: {
