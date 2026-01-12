@@ -7,8 +7,8 @@ import { ExternalLink, Github, Code2, Brain, Database, Eye } from 'lucide-react'
 
 const projects = [
   {
-    title: 'CavSpot: Deep Learning Diagnostic System',
-    category: 'Computer Vision',
+    title: 'CavScan: Deep Learning Diagnostic System',
+    category: 'Computer Vision /RAG /CrewAI',
     icon: Eye,
     description: 'End-to-end dental cavity detection pipeline using Vision Transformers (ViT) trained on 90K X-rays',
     technologies: ['PyTorch', 'ViT', 'Computer Vision', 'FastAPI', 'Docker'],

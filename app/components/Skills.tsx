@@ -150,7 +150,7 @@ export default function Skills() {
               Also Proficient In
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {['openAI API','Unsloth', 'NeML', 'PEFT', 'OpeanAI API', 'React','Linux'].map((tech, i) => (
+              {['openAI API','Unsloth', 'NeML', 'PEFT', 'OpeanAI API', 'Linux'].map((tech, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, scale: 0 }}
