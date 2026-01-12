@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { Github, Linkedin, Mail, MapPin, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, ArrowDown, Download } from 'lucide-react';
 
 export default function Hero() {
   const scrollToAbout = () => {
@@ -105,8 +105,16 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
             <a
+              href="/resume.pdf"
+              download="Gaurav_Chaudhari_Resume.pdf"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-xl text-white bg-primary-600 hover:bg-primary-700 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl"
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Download Resume
+            </a>
+            <a
               href="mailto:chaudharigaurav37@gmail.com"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 border-2 border-primary-600 dark:border-primary-500 text-base font-semibold rounded-xl text-primary-600 dark:text-primary-400 bg-transparent hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all transform hover:scale-105 shadow-lg"
             >
               <Mail className="w-5 h-5 mr-2" />
               Get in Touch
@@ -115,7 +123,7 @@ export default function Hero() {
               href="https://github.com/gaurav-163"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-lg text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-base font-semibold rounded-xl text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all transform hover:scale-105 shadow-lg"
             >
               <Github className="w-5 h-5 mr-2" />
               GitHub
