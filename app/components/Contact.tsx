@@ -104,7 +104,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Phone</p>
-                    <p className="text-gray-900 dark:text-white font-semibold text-lg">+91 8850873204</p>
+                    <p className="text-gray-900 dark:text-white font-semibold text-lg">+91 8855873204</p>
                   </div>
                 </a>
 

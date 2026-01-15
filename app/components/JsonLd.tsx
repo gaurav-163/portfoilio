@@ -25,7 +25,7 @@ export default function JsonLd() {
       addressCountry: "IN",
     },
     email: "chaudharigaurav37@gmail.com",
-    telephone: "+91-8850873204",
+    telephone: "+91-8855873204",
     alumniOf: {
       "@type": "EducationalOrganization",
       name: "New Horizon Institute Of Technology & Management",
