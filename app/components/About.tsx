@@ -67,9 +67,9 @@ export default function About() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700">
+              <div className="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-600">
                 <div className="flex items-start space-x-4">
-                  <div className="p-4 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-4 bg-primary-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <TrendingUp className="w-7 h-7 text-white" />
                   </div>
                   <div>
@@ -82,9 +82,9 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-700">
+              <div className="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-600">
                 <div className="flex items-start space-x-4">
-                  <div className="p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-4 bg-purple-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Award className="w-7 h-7 text-white" />
                   </div>
                   <div>
