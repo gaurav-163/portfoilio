@@ -84,9 +84,9 @@ export default function Contact() {
               <div className="space-y-6">
                 <a
                   href="mailto:chaudharigaurav37@gmail.com"
-                  className="flex items-center space-x-4 p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600"
+                  className="flex items-center space-x-4 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group border-2 border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-600"
                 >
-                  <div className="p-4 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="p-4 bg-primary-600 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -96,10 +96,10 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="tel:+918855873204"
-                  className="flex items-center space-x-4 p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600"
+                  href="tel:+918850873204"
+                  className="flex items-center space-x-4 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group border-2 border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-600"
                 >
-                  <div className="p-4 bg-gradient-to-br from-green-500 to-green-600 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="p-4 bg-green-600 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -108,8 +108,8 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <div className="flex items-center space-x-4 p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700">
-                  <div className="p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg">
+                <div className="flex items-center space-x-4 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-xl border-2 border-gray-200 dark:border-gray-700">
+                  <div className="p-4 bg-purple-600 rounded-xl shadow-lg">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -128,7 +128,7 @@ export default function Contact() {
                     href="https://linkedin.com/in/gaurav-chaudhari-gc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 transform"
+                    className="p-4 bg-blue-600 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 transform"
                   >
                     <Linkedin className="w-7 h-7 text-white" />
                   </a>
@@ -136,7 +136,7 @@ export default function Contact() {
                     href="https://github.com/gaurav-chaudhari-gc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-gradient-to-br from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 transform"
+                    className="p-4 bg-gray-800 dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 transform"
                   >
                     <Github className="w-7 h-7 text-white" />
                   </a>
@@ -150,7 +150,7 @@ export default function Contact() {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <form ref={formRef} onSubmit={handleSubmit} className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border-2 border-gray-200 dark:border-gray-700 space-y-6">
                 <input type="hidden" name="access_key" value="4052d311-164c-49f2-9fe9-4e09a891adfa" />
                 <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
                 <input type="hidden" name="from_name" value="Portfolio Contact Form" />
@@ -216,8 +216,8 @@ export default function Contact() {
                   disabled={isSubmitting || isSubmitted}
                   className={`w-full py-5 px-8 rounded-xl font-bold text-white text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center space-x-3 ${
                     isSubmitted
-                      ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700'
-                      : 'bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 hover:from-primary-700 hover:via-purple-700 hover:to-pink-700'
+                      ? 'bg-green-600 hover:bg-green-700'
+                      : 'bg-primary-600 hover:bg-primary-700'
                   } disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none`}
                 >
                   {isSubmitting ? (
