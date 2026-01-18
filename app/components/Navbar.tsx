@@ -81,7 +81,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index }}
-                  className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-white/20 dark:hover:bg-white/10"
+                  className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-[#c3d0ff] px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-white/20 dark:hover:bg-white/10"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -96,7 +96,7 @@ export default function Navbar() {
                 aria-label="Toggle theme"
               >
                 {theme === 'dark' ? (
-                  <Sun className="h-5 w-5 text-yellow-400" />
+                  <Sun className="h-5 w-5 text-[#c3d0ff]" />
                 ) : (
                   <Moon className="h-5 w-5 text-slate-700" />
                 )}
@@ -112,7 +112,7 @@ export default function Navbar() {
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
-                <Sun className="h-5 w-5 text-yellow-400" />
+                <Sun className="h-5 w-5 text-[#c3d0ff]" />
               ) : (
                 <Moon className="h-5 w-5 text-slate-700" />
               )}
@@ -143,7 +143,7 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-yellow-400 hover:bg-white/20 dark:hover:bg-white/10 block px-3 py-2 rounded-full text-base font-medium transition-all"
+                  className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-[#c3d0ff] hover:bg-white/20 dark:hover:bg-white/10 block px-3 py-2 rounded-full text-base font-medium transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

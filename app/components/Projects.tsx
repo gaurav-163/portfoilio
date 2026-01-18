@@ -87,7 +87,7 @@ export default function Projects() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105 ${
                   activeCategory === category
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 text-white dark:text-gray-900 shadow-lg'
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] text-white dark:text-gray-900 shadow-lg'
                     : 'glass glass-hover text-gray-700 dark:text-gray-300'
                 }`}
               >
@@ -110,7 +110,7 @@ export default function Projects() {
                 >
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 rounded-lg group-hover:scale-110 transition-transform shadow-lg">
+                      <div className="p-3 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] rounded-lg group-hover:scale-110 transition-transform shadow-lg">
                         <Icon className="w-6 h-6 text-white dark:text-gray-900" />
                       </div>
                       <div className="flex gap-2">
@@ -125,11 +125,11 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    <span className="inline-block px-3 py-1 rounded-full glass text-purple-700 dark:text-yellow-300 text-xs font-semibold mb-3">
+                    <span className="inline-block px-3 py-1 rounded-full glass text-purple-700 dark:text-[#c3d0ff] text-xs font-semibold mb-3">
                       {project.category}
                     </span>
 
-                    <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-yellow-400 transition-colors">
+                    <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-[#c3d0ff] transition-colors">
                       {project.title}
                     </h3>
 
@@ -142,7 +142,7 @@ export default function Projects() {
                       <ul className="space-y-1">
                         {project.achievements.map((achievement, i) => (
                           <li key={i} className="text-xs text-gray-700 dark:text-gray-300 flex items-start">
-                            <span className="text-purple-600 dark:text-yellow-400 mr-2">•</span>
+                            <span className="text-purple-600 dark:text-[#c3d0ff] mr-2">•</span>
                             <span>{achievement}</span>
                           </li>
                         ))}

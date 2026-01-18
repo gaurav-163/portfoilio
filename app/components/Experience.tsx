@@ -51,7 +51,7 @@ export default function Experience() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-gradient-to-b from-purple-400 to-pink-600 dark:from-yellow-400 dark:to-amber-600"></div>
+            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-gradient-to-b from-purple-400 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff]"></div>
 
             {experiences.map((exp, index) => (
               <motion.div
@@ -64,11 +64,11 @@ export default function Experience() {
                 } md:w-1/2`}
               >
                 {/* Timeline dot */}
-                <div className={`absolute top-6 ${index % 2 === 0 ? 'md:right-0' : 'md:left-0'} left-0 md:transform md:translate-x-1/2 w-4 h-4 bg-gradient-to-br from-purple-400 to-pink-500 dark:from-yellow-400 dark:to-amber-500 border-4 border-purple-100 dark:border-slate-950 rounded-full z-10 shadow-lg`}></div>
+                <div className={`absolute top-6 ${index % 2 === 0 ? 'md:right-0' : 'md:left-0'} left-0 md:transform md:translate-x-1/2 w-4 h-4 bg-gradient-to-br from-purple-400 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff] border-4 border-purple-100 dark:border-slate-950 rounded-full z-10 shadow-lg`}></div>
 
                 <div className="ml-8 md:ml-0 glass-card glass-card-hover p-6 rounded-2xl transition-all">
                   <div className="flex items-center gap-2 mb-3 flex-wrap">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full glass text-purple-700 dark:text-yellow-300 text-sm font-semibold">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full glass text-purple-700 dark:text-[#c3d0ff] text-sm font-semibold">
                       <Briefcase className="w-4 h-4 mr-1" />
                       {exp.company}
                     </span>
@@ -95,7 +95,7 @@ export default function Experience() {
                         dangerouslySetInnerHTML={{
                           __html: achievement.replace(
                             /(\d+%|<\d+ms|75%|92%)/g,
-                            '<span class="font-semibold text-purple-600 dark:text-yellow-400">$1</span>'
+                            '<span class="font-semibold text-purple-600 dark:text-[#c3d0ff]">$1</span>'
                           ),
                         }}
                       />

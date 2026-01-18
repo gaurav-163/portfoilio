@@ -47,10 +47,10 @@ export default function About() {
                 Transforming Ideas into Intelligent Solutions
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                I'm a passionate Software Engineer at <span className="font-semibold text-purple-600 dark:text-yellow-400">Anvex AI</span>, 
+                I'm a passionate Software Engineer at <span className="font-semibold text-purple-600 dark:text-[#a7b5ff]">Anvex AI</span>, 
                 specializing in cutting-edge AI/ML technologies. With expertise in building high-performance inference 
                 microservices using FastAPI and Docker, I've successfully reduced model latency by up to 
-                <span className="inline-block px-2 py-0.5 mx-1 bg-purple-200/50 dark:bg-yellow-900/30 text-purple-700 dark:text-yellow-300 rounded font-semibold">2300ms</span> for real-time interactions.
+                <span className="inline-block px-2 py-0.5 mx-1 bg-purple-200/50 dark:bg-indigo-900/30 text-purple-700 dark:text-[#c3d0ff] rounded font-semibold">2300ms</span> for real-time interactions.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 My work spans across various AI domains including <span className="font-semibold text-gray-900 dark:text-white">LLM Fine-Tuning</span>, 
@@ -62,7 +62,7 @@ export default function About() {
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 Currently pursuing my B.E. in <span className="font-semibold text-gray-900 dark:text-white">Artificial Intelligence and Data Science</span> 
                 from New Horizon Institute, I'm constantly pushing the boundaries of what's possible with AI, 
-                having won <span className="inline-block px-2 py-0.5 mx-1 bg-purple-200/50 dark:bg-yellow-900/30 text-purple-700 dark:text-yellow-300 rounded font-semibold">1st place</span> in a LLM Fine-Tuning Hackathon.
+                having won <span className="inline-block px-2 py-0.5 mx-1 bg-purple-200/50 dark:bg-indigo-900/30 text-purple-700 dark:text-[#c3d0ff] rounded font-semibold">1st place</span> in a LLM Fine-Tuning Hackathon.
               </p>
             </motion.div>
 

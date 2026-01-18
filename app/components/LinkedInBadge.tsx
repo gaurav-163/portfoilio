@@ -54,14 +54,14 @@ export default function LinkedInBadge() {
       <div className="glass glass-hover rounded-2xl border-2 border-white/20 p-4 overflow-hidden">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <Linkedin className="w-5 h-5 text-purple-600 dark:text-yellow-400" />
+            <Linkedin className="w-5 h-5 text-purple-600 dark:text-[#c3d0ff]" />
             <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">LinkedIn Profile</span>
           </div>
           <a
             href={profileUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 text-white dark:text-gray-900 hover:shadow-glow-lg transition-all"
+            className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] text-white dark:text-gray-900 hover:shadow-glow-lg transition-all"
           >
             Follow
           </a>
@@ -101,7 +101,7 @@ export default function LinkedInBadge() {
             href={profileUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 text-white dark:text-gray-900 hover:shadow-glow-lg transition-all"
+            className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] text-white dark:text-gray-900 hover:shadow-glow-lg transition-all"
           >
             <Linkedin className="w-4 h-4 mr-2" /> View on LinkedIn
           </a>

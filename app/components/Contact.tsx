@@ -86,7 +86,7 @@ export default function Contact() {
                   href="mailto:chaudharigaurav37@gmail.com"
                   className="flex items-center space-x-4 p-6 glass-card glass-card-hover rounded-2xl border-0 transition-all group"
                 >
-                  <div className="p-4 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="p-4 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] rounded-xl group-hover:scale-110 transition-transform shadow-lg">
                     <Mail className="w-6 h-6 text-white dark:text-gray-900" />
                   </div>
                   <div>
@@ -109,7 +109,7 @@ export default function Contact() {
                 </a>
 
                 <div className="flex items-center space-x-4 p-6 glass-card glass-card-hover rounded-2xl border-0 transition-all group">
-                  <div className="p-4 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 rounded-xl shadow-lg">
+                  <div className="p-4 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] rounded-xl shadow-lg">
                     <MapPin className="w-6 h-6 text-white dark:text-gray-900" />
                   </div>
                   <div>
@@ -128,7 +128,7 @@ export default function Contact() {
                     href="https://linkedin.com/in/gaurav-chaudhari-gc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 rounded-xl shadow-lg hover:shadow-glow-lg transition-all hover:scale-110 transform"
+                    className="p-4 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] rounded-xl shadow-lg hover:shadow-glow-lg transition-all hover:scale-110 transform"
                   >
                     <Linkedin className="w-7 h-7 text-white dark:text-gray-900" />
                   </a>
@@ -164,7 +164,7 @@ export default function Contact() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-5 py-4 bg-white/20 dark:bg-white/10 backdrop-blur-xl border-2 border-white/30 dark:border-white/20 rounded-xl focus:ring-2 focus:ring-purple-500 dark:focus:ring-yellow-400 focus:border-purple-500 dark:focus:border-yellow-400 text-gray-900 dark:text-white font-medium shadow-sm hover:border-white/40 dark:hover:border-white/30 transition-colors placeholder-gray-600 dark:placeholder-gray-400"
+                    className="w-full px-5 py-4 bg-white/20 dark:bg-white/10 backdrop-blur-xl border-2 border-white/30 dark:border-white/20 rounded-xl focus:ring-2 focus:ring-purple-500 dark:focus:ring-[#7c8cff] focus:border-purple-500 dark:focus:border-[#7c8cff] text-gray-900 dark:text-white font-medium shadow-sm hover:border-white/40 dark:hover:border-white/30 transition-colors placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="Your Name"
                   />
                 </div>
@@ -178,7 +178,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-5 py-4 bg-white/20 dark:bg-white/10 backdrop-blur-xl border-2 border-white/30 dark:border-white/20 rounded-xl focus:ring-2 focus:ring-purple-500 dark:focus:ring-yellow-400 focus:border-purple-500 dark:focus:border-yellow-400 text-gray-900 dark:text-white font-medium shadow-sm hover:border-white/40 dark:hover:border-white/30 transition-colors placeholder-gray-600 dark:placeholder-gray-400"
+                    className="w-full px-5 py-4 bg-white/20 dark:bg-white/10 backdrop-blur-xl border-2 border-white/30 dark:border-white/20 rounded-xl focus:ring-2 focus:ring-purple-500 dark:focus:ring-[#7c8cff] focus:border-purple-500 dark:focus:border-[#7c8cff] text-gray-900 dark:text-white font-medium shadow-sm hover:border-white/40 dark:hover:border-white/30 transition-colors placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                     id="subject"
                     name="subject"
                     required
-                    className="w-full px-5 py-4 bg-white/20 dark:bg-white/10 backdrop-blur-xl border-2 border-white/30 dark:border-white/20 rounded-xl focus:ring-2 focus:ring-purple-500 dark:focus:ring-yellow-400 focus:border-purple-500 dark:focus:border-yellow-400 text-gray-900 dark:text-white font-medium shadow-sm hover:border-white/40 dark:hover:border-white/30 transition-colors placeholder-gray-600 dark:placeholder-gray-400"
+                    className="w-full px-5 py-4 bg-white/20 dark:bg-white/10 backdrop-blur-xl border-2 border-white/30 dark:border-white/20 rounded-xl focus:ring-2 focus:ring-purple-500 dark:focus:ring-[#7c8cff] focus:border-purple-500 dark:focus:border-[#7c8cff] text-gray-900 dark:text-white font-medium shadow-sm hover:border-white/40 dark:hover:border-white/30 transition-colors placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -206,7 +206,7 @@ export default function Contact() {
                     name="message"
                     required
                     rows={5}
-                    className="w-full px-5 py-4 bg-white/20 dark:bg-white/10 backdrop-blur-xl border-2 border-white/30 dark:border-white/20 rounded-xl focus:ring-2 focus:ring-purple-500 dark:focus:ring-yellow-400 focus:border-purple-500 dark:focus:border-yellow-400 text-gray-900 dark:text-white font-medium resize-none shadow-sm hover:border-white/40 dark:hover:border-white/30 transition-colors placeholder-gray-600 dark:placeholder-gray-400"
+                    className="w-full px-5 py-4 bg-white/20 dark:bg-white/10 backdrop-blur-xl border-2 border-white/30 dark:border-white/20 rounded-xl focus:ring-2 focus:ring-purple-500 dark:focus:ring-[#7c8cff] focus:border-purple-500 dark:focus:border-[#7c8cff] text-gray-900 dark:text-white font-medium resize-none shadow-sm hover:border-white/40 dark:hover:border-white/30 transition-colors placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="Tell me about your project or idea..."
                   />
                 </div>
@@ -217,7 +217,7 @@ export default function Contact() {
                   className={`w-full py-5 px-8 rounded-xl font-bold text-white text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-glow-lg flex items-center justify-center space-x-3 ${
                     isSubmitted
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
-                      : 'bg-gradient-to-r from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 dark:text-gray-900 hover:from-purple-700 hover:to-pink-700 dark:hover:from-yellow-500 dark:hover:to-amber-600'
+                      : 'bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] dark:text-gray-900 hover:from-purple-700 hover:to-pink-700 dark:hover:from-[#899bff] dark:hover:to-[#c189ff]'
                   } disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none`}
                 >
                   {isSubmitting ? (

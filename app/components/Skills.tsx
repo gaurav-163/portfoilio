@@ -25,7 +25,7 @@ const skillCategories = [
       'CrewAI',
       'Prompt Engineering (CoT)',
     ],
-    color: 'from-purple-500 to-pink-500 dark:from-yellow-400 dark:to-amber-500',
+    color: 'from-purple-500 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff]',
   },
   {
     title: 'Machine Learning',
@@ -36,7 +36,7 @@ const skillCategories = [
       'Scikit-Learn',
       'Vector Search (FAISS, ChromaDB)',
     ],
-    color: 'from-pink-500 to-purple-500 dark:from-amber-400 dark:to-yellow-500',
+    color: 'from-pink-500 to-purple-500 dark:from-[#8ca2ff] dark:to-[#c189ff]',
   },
   {
     title: 'Multimodal AI',
@@ -48,7 +48,7 @@ const skillCategories = [
       'TTS',
       'ASR',
     ],
-    color: 'from-purple-500 to-pink-500 dark:from-yellow-500 dark:to-amber-400',
+    color: 'from-purple-500 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff]',
   },
   {
     title: 'Infrastructure & DevOps',
@@ -61,7 +61,7 @@ const skillCategories = [
       'GCP',
       'GitHub Actions',
     ],
-    color: 'from-pink-500 to-purple-500 dark:from-amber-500 dark:to-yellow-400',
+    color: 'from-pink-500 to-purple-500 dark:from-[#8ca2ff] dark:to-[#c189ff]',
   },
   {
     title: 'Data & Databases',
@@ -72,7 +72,7 @@ const skillCategories = [
       'Pandas',
       'NumPy',
     ],
-    color: 'from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-600',
+    color: 'from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff]',
   },
 ];
 
@@ -156,7 +156,7 @@ export default function Skills() {
                   initial={{ opacity: 0, scale: 0 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.3, delay: 0.7 + i * 0.05 }}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 text-white dark:text-gray-900 rounded-full text-sm font-medium shadow-lg hover:shadow-glow-lg transform hover:scale-105 transition-all"
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] text-white dark:text-gray-900 rounded-full text-sm font-medium shadow-lg hover:shadow-glow-lg transform hover:scale-105 transition-all"
                 >
                   {tech}
                 </motion.span>

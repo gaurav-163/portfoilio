@@ -78,14 +78,14 @@ export default function Hero() {
             <a
               href="/resume.pdf"
               download="Gaurav_Chaudhari_Resume.pdf"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-2xl text-white bg-gradient-to-r from-purple-600 to-pink-600 dark:from-yellow-300 dark:to-amber-400 dark:text-gray-900 hover:shadow-glow-lg transition-all transform hover:scale-105 shadow-xl backdrop-blur-sm"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-2xl text-white bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] dark:text-gray-900 hover:shadow-glow-lg transition-all transform hover:scale-105 shadow-xl backdrop-blur-sm"
             >
               <Download className="w-5 h-5 mr-2" />
               Download Resume
             </a>
             <a
               href="mailto:chaudharigaurav37@gmail.com"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-2xl glass glass-hover text-purple-600 dark:text-yellow-400 transition-all transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-2xl glass glass-hover text-purple-600 dark:text-[#c3d0ff] transition-all transform hover:scale-105"
             >
               <Mail className="w-5 h-5 mr-2" />
               Get in Touch
@@ -111,7 +111,7 @@ export default function Hero() {
               href="https://linkedin.com/in/gaurav-chaudhari-gc"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full glass glass-hover text-purple-600 dark:text-yellow-400 transition-all"
+              className="p-3 rounded-full glass glass-hover text-purple-600 dark:text-[#c3d0ff] transition-all"
             >
               <Linkedin className="w-6 h-6" />
             </a>
@@ -125,7 +125,7 @@ export default function Hero() {
             </a>
             <a
               href="mailto:chaudharigaurav37@gmail.com"
-              className="p-3 rounded-full glass glass-hover text-purple-600 dark:text-yellow-400 transition-all"
+              className="p-3 rounded-full glass glass-hover text-purple-600 dark:text-[#c3d0ff] transition-all"
             >
               <Mail className="w-6 h-6" />
             </a>
@@ -139,7 +139,7 @@ export default function Hero() {
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
             aria-label="Scroll to about section"
           >
-            <ArrowDown className="w-8 h-8 text-purple-600 dark:text-yellow-400" />
+            <ArrowDown className="w-8 h-8 text-purple-600 dark:text-[#c3d0ff]" />
           </motion.button>
         </div>
       </div>

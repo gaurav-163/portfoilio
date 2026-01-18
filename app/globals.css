@@ -51,7 +51,7 @@
 
   /* Gradient Text */
   .gradient-text {
-    @apply bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 dark:from-yellow-300 dark:via-yellow-400 dark:to-amber-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 dark:from-[#7c8cff] dark:via-[#b178ff] dark:to-[#8ca2ff] bg-clip-text text-transparent;
   }
 
   /* Liquid Animations */
