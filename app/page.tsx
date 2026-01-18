@@ -2,7 +2,7 @@ import ClientLayout from './components/ClientLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Gaurav Chaudhari',
 };
 
 export default function Home() {
