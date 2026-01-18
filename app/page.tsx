@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-[#0b1224] to-[#0f172a] dark:from-[#060a14] dark:via-[#080c18] dark:to-black relative overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-[#eef1fa] to-[#e4e8f6] dark:from-[#060a14] dark:via-[#080c18] dark:to-black relative overflow-hidden">
       {/* Animated liquid blobs background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-[#7c8cff]/18 to-[#c189ff]/18 dark:from-[#7282ff]/18 dark:to-[#b178ff]/18 rounded-full mix-blend-multiply filter blur-3xl liquid-blob animate-pulse-glow"></div>
