@@ -25,6 +25,30 @@
     @apply hover:bg-white/20 dark:hover:bg-white/10 hover:border-white/40 dark:hover:border-white/30 transition-all duration-500;
   }
 
+  /* Glass Variants */
+  .glass-subtle {
+    @apply backdrop-blur-xl bg-white/5 dark:bg-white/2 border border-white/20 dark:border-white/10;
+  }
+
+  .glass-strong {
+    @apply backdrop-blur-3xl bg-white/20 dark:bg-white/10 border border-white/50 dark:border-white/30;
+  }
+
+  /* Text Effects */
+  .text-glow {
+    @apply text-shadow;
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+  }
+
+  .glow-on-hover {
+    @apply transition-all duration-300 hover:shadow-[0_0_20px_rgba(168,85,247,0.5)];
+  }
+
+  /* Focus Ring for Accessibility */
+  .focus-ring {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500/50;
+  }
+
   /* Gradient Text */
   .gradient-text {
     @apply bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 dark:from-yellow-300 dark:via-yellow-400 dark:to-amber-500 bg-clip-text text-transparent;
