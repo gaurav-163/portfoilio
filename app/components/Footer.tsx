@@ -34,12 +34,6 @@ export default function Footer() {
               AI/ML Engineer • Generative AI Specialist • Problem Solver
             </p>
             
-            <div className="flex items-center justify-center space-x-1 text-gray-700 dark:text-gray-300">
-              <span>Built with</span>
-              <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
-              <span>using Next.js, TypeScript & Tailwind CSS</span>
-            </div>
-
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
               © {new Date().getFullYear()} Gaurav Chaudhari. All rights reserved.
             </p>
