@@ -25,7 +25,7 @@ const skillCategories = [
       'CrewAI',
       'Prompt Engineering (CoT)',
     ],
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-500 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff]',
   },
   {
     title: 'Machine Learning',
@@ -36,7 +36,7 @@ const skillCategories = [
       'Scikit-Learn',
       'Vector Search (FAISS, ChromaDB)',
     ],
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-pink-500 to-purple-500 dark:from-[#8ca2ff] dark:to-[#c189ff]',
   },
   {
     title: 'Multimodal AI',
@@ -48,7 +48,7 @@ const skillCategories = [
       'TTS',
       'ASR',
     ],
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-purple-500 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff]',
   },
   {
     title: 'Infrastructure & DevOps',
@@ -61,7 +61,7 @@ const skillCategories = [
       'GCP',
       'GitHub Actions',
     ],
-    color: 'from-orange-500 to-red-500',
+    color: 'from-pink-500 to-purple-500 dark:from-[#8ca2ff] dark:to-[#c189ff]',
   },
   {
     title: 'Data & Databases',
@@ -72,7 +72,7 @@ const skillCategories = [
       'Pandas',
       'NumPy',
     ],
-    color: 'from-indigo-500 to-purple-500',
+    color: 'from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff]',
   },
 ];
 
@@ -83,7 +83,7 @@ export default function Skills() {
   });
 
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-900">
+    <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -94,7 +94,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 gradient-text">
             Technical Skills
           </h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-gray-700 dark:text-gray-300 mb-16 max-w-2xl mx-auto">
             A comprehensive toolkit for building cutting-edge AI solutions
           </p>
 
@@ -107,10 +107,10 @@ export default function Skills() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                  className="glass-card glass-card-hover rounded-2xl p-6 border-0 transition-all"
                 >
                   <div className="flex items-center mb-6">
-                    <div className={`p-3 rounded-lg bg-gradient-to-br ${category.color}`}>
+                    <div className={`p-3 rounded-lg bg-gradient-to-br ${category.color} shadow-lg`}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-xl font-bold text-gray-900 dark:text-white">
@@ -127,7 +127,7 @@ export default function Skills() {
                         transition={{ duration: 0.3, delay: index * 0.1 + i * 0.05 }}
                         className="flex items-center"
                       >
-                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mr-3`} />
+                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mr-3 shadow`} />
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           {skill}
                         </span>
@@ -156,7 +156,7 @@ export default function Skills() {
                   initial={{ opacity: 0, scale: 0 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.3, delay: 0.7 + i * 0.05 }}
-                  className="px-4 py-2 bg-gradient-to-r from-primary-500 to-purple-500 text-white rounded-full text-sm font-medium shadow-md hover:shadow-lg transform hover:scale-105 transition-all"
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] text-white dark:text-gray-900 rounded-full text-sm font-medium shadow-lg hover:shadow-glow-lg transform hover:scale-105 transition-all"
                 >
                   {tech}
                 </motion.span>

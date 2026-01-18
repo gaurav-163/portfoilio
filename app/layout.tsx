@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./context/ThemeContext";
 import JsonLd from "./components/JsonLd";
+import Script from "next/script";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -94,6 +95,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         <JsonLd />
+        {/* LinkedIn Badge Script */}
+        <Script src="https://platform.linkedin.com/badges/js/profile.js" strategy="afterInteractive" />
         <ThemeProvider>
           {children}
         </ThemeProvider>

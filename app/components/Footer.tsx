@@ -20,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className="glass border-t-2 border-white/20 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
           <motion.div
@@ -30,17 +30,11 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold gradient-text mb-4">Gaurav Chaudhari</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
               AI/ML Engineer • Generative AI Specialist • Problem Solver
             </p>
             
-            <div className="flex items-center justify-center space-x-1 text-gray-600 dark:text-gray-400">
-              <span>Built with</span>
-              <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
-              <span>using Next.js, TypeScript & Tailwind CSS</span>
-            </div>
-
-            <p className="text-sm text-gray-500 dark:text-gray-500 mt-4">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
               © {new Date().getFullYear()} Gaurav Chaudhari. All rights reserved.
             </p>
           </motion.div>
@@ -54,7 +48,7 @@ export default function Footer() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-110 z-50"
+          className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] text-white dark:text-gray-900 rounded-full shadow-lg hover:shadow-glow-lg transition-all transform hover:scale-110 z-50"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-6 h-6" />

@@ -37,7 +37,7 @@ export default function Experience() {
   });
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
+    <section id="experience" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -51,7 +51,7 @@ export default function Experience() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-gradient-to-b from-primary-500 to-purple-500"></div>
+            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-gradient-to-b from-purple-400 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff]"></div>
 
             {experiences.map((exp, index) => (
               <motion.div
@@ -64,15 +64,15 @@ export default function Experience() {
                 } md:w-1/2`}
               >
                 {/* Timeline dot */}
-                <div className={`absolute top-6 ${index % 2 === 0 ? 'md:right-0' : 'md:left-0'} left-0 md:transform md:translate-x-1/2 w-4 h-4 bg-primary-600 border-4 border-white dark:border-gray-900 rounded-full z-10`}></div>
+                <div className={`absolute top-6 ${index % 2 === 0 ? 'md:right-0' : 'md:left-0'} left-0 md:transform md:translate-x-1/2 w-4 h-4 bg-gradient-to-br from-purple-400 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff] border-4 border-purple-100 dark:border-slate-950 rounded-full z-10 shadow-lg`}></div>
 
-                <div className="ml-8 md:ml-0 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                <div className="ml-8 md:ml-0 glass-card glass-card-hover p-6 rounded-2xl transition-all">
                   <div className="flex items-center gap-2 mb-3 flex-wrap">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-semibold">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full glass text-purple-700 dark:text-[#c3d0ff] text-sm font-semibold">
                       <Briefcase className="w-4 h-4 mr-1" />
                       {exp.company}
                     </span>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full glass text-purple-700 dark:text-purple-300 text-sm">
                       <Calendar className="w-4 h-4 mr-1" />
                       {exp.period}
                     </span>
@@ -82,7 +82,7 @@ export default function Experience() {
                     {exp.role}
                   </h3>
                   
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 flex items-center gap-1">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-1">
                     <MapPin className="w-4 h-4" />
                     {exp.location}
                   </p>
@@ -95,7 +95,7 @@ export default function Experience() {
                         dangerouslySetInnerHTML={{
                           __html: achievement.replace(
                             /(\d+%|<\d+ms|75%|92%)/g,
-                            '<span class="font-semibold text-primary-600 dark:text-primary-400">$1</span>'
+                            '<span class="font-semibold text-purple-600 dark:text-[#c3d0ff]">$1</span>'
                           ),
                         }}
                       />
