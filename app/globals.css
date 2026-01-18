@@ -168,13 +168,13 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(135deg, rgb(240, 249, 255) 0%, rgb(224, 242, 254) 100%);
+  background: linear-gradient(135deg, #0b1224 0%, #0f172a 100%);
   position: relative;
   overflow-x: hidden;
 }
 
 .dark body {
-  background: linear-gradient(135deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%);
+  background: linear-gradient(135deg, #060a14 0%, #080c18 100%);
 }
 
 /* Custom scrollbar */
