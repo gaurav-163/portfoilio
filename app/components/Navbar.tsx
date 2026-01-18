@@ -33,7 +33,7 @@ export default function Navbar() {
     return (
       <nav className="fixed top-3 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="rounded-full backdrop-blur-xl bg-white/5 border border-white/15 shadow-sm px-5 h-14 flex items-center justify-between">
+          <div className="rounded-full backdrop-blur-xl bg-gradient-to-br from-white/40 to-white/20 dark:from-white/8 dark:to-white/5 border border-white/30 dark:border-white/15 shadow-sm px-5 h-14 flex items-center justify-between">
             <div className="text-2xl font-bold gradient-text">GC</div>
           </div>
         </div>
@@ -52,7 +52,11 @@ export default function Navbar() {
         <div
           className={`rounded-full px-5 h-14 flex items-center justify-between transition-all duration-300 shadow-sm ${
             scrolled
-              ? 'backdrop-blur-xl bg-white/8 border border-white/20'
+              ? theme === 'light'
+                ? 'backdrop-blur-xl bg-gradient-to-br from-white/50 to-white/30 border border-white/40'
+                : 'backdrop-blur-xl bg-white/8 border border-white/20'
+              : theme === 'light'
+              ? 'backdrop-blur-xl bg-gradient-to-br from-white/40 to-white/20 border border-white/30'
               : 'backdrop-blur-xl bg-white/5 border border-white/15'
           }`}
         >

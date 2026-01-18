@@ -84,7 +84,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <a
                   href="mailto:chaudharigaurav37@gmail.com"
-                  className="flex items-center space-x-4 p-6 glass glass-hover rounded-xl border-2 border-white/20 hover:border-purple-400/50 dark:hover:border-yellow-400/50 transition-all group"
+                  className="flex items-center space-x-4 p-6 glass-card glass-card-hover rounded-2xl border-0 transition-all group"
                 >
                   <div className="p-4 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 rounded-xl group-hover:scale-110 transition-transform shadow-lg">
                     <Mail className="w-6 h-6 text-white dark:text-gray-900" />
@@ -108,7 +108,7 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <div className="flex items-center space-x-4 p-6 glass glass-hover rounded-xl border-2 border-white/20 hover:border-purple-400/50 dark:hover:border-yellow-400/50 transition-all group">
+                <div className="flex items-center space-x-4 p-6 glass-card glass-card-hover rounded-2xl border-0 transition-all group">
                   <div className="p-4 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-yellow-400 dark:to-amber-500 rounded-xl shadow-lg">
                     <MapPin className="w-6 h-6 text-white dark:text-gray-900" />
                   </div>
@@ -150,7 +150,7 @@ export default function Contact() {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <form ref={formRef} onSubmit={handleSubmit} className="glass p-8 rounded-2xl border-2 border-white/20 space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="glass-card glass-card-hover p-8 rounded-3xl border-0 space-y-6 transition-all">
                 <input type="hidden" name="access_key" value="4052d311-164c-49f2-9fe9-4e09a891adfa" />
                 <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
                 <input type="hidden" name="from_name" value="Portfolio Contact Form" />

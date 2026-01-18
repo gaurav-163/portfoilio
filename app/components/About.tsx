@@ -67,7 +67,7 @@ export default function About() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="group glass glass-hover p-8 rounded-2xl border-2 border-white/20 hover:border-cyan-400/50 transition-all">
+              <div className="group glass-card glass-card-hover p-8 rounded-3xl transition-all">
                 <div className="flex items-start space-x-4">
                   <div className="p-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
                     <TrendingUp className="w-7 h-7 text-white" />
@@ -82,7 +82,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="group glass glass-hover p-8 rounded-2xl border-2 border-white/20 hover:border-purple-400/50 transition-all">
+              <div className="group glass-card glass-card-hover p-8 rounded-3xl transition-all">
                 <div className="flex items-start space-x-4">
                   <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
                     <Award className="w-7 h-7 text-white" />

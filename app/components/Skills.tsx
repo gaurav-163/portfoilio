@@ -107,7 +107,7 @@ export default function Skills() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="glass glass-hover rounded-xl p-6 border-2 border-white/20 hover:border-purple-400/50 dark:hover:border-yellow-400/50 transition-all"
+                  className="glass-card glass-card-hover rounded-2xl p-6 border-0 transition-all"
                 >
                   <div className="flex items-center mb-6">
                     <div className={`p-3 rounded-lg bg-gradient-to-br ${category.color} shadow-lg`}>

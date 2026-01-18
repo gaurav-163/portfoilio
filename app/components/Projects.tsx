@@ -106,7 +106,7 @@ export default function Projects() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="glass glass-hover rounded-xl overflow-hidden border-2 border-white/20 group hover:border-purple-400/50 dark:hover:border-yellow-400/50 transition-all"
+                  className="glass-card glass-card-hover rounded-2xl overflow-hidden border-0 group transition-all"
                 >
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">

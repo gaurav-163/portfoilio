@@ -66,7 +66,7 @@ export default function Experience() {
                 {/* Timeline dot */}
                 <div className={`absolute top-6 ${index % 2 === 0 ? 'md:right-0' : 'md:left-0'} left-0 md:transform md:translate-x-1/2 w-4 h-4 bg-gradient-to-br from-purple-400 to-pink-500 dark:from-yellow-400 dark:to-amber-500 border-4 border-purple-100 dark:border-slate-950 rounded-full z-10 shadow-lg`}></div>
 
-                <div className="ml-8 md:ml-0 glass glass-hover p-6 rounded-xl border-2 border-white/20 hover:border-purple-400/50 dark:hover:border-yellow-400/50 transition-all">
+                <div className="ml-8 md:ml-0 glass-card glass-card-hover p-6 rounded-2xl transition-all">
                   <div className="flex items-center gap-2 mb-3 flex-wrap">
                     <span className="inline-flex items-center px-3 py-1 rounded-full glass text-purple-700 dark:text-yellow-300 text-sm font-semibold">
                       <Briefcase className="w-4 h-4 mr-1" />
