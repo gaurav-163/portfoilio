@@ -10,37 +10,8 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-purple-500/10 to-pink-500/10 dark:from-primary-900/20 dark:via-purple-900/20 dark:to-pink-900/20" />
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [90, 0, 90],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
-        />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -48,9 +19,9 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium">
-              <MapPin className="w-4 h-4 mr-2" />
-              Mumbai, India
+            <span className="inline-flex items-center px-4 py-2 rounded-full glass glass-hover">
+              <MapPin className="w-4 h-4 mr-2 text-cyan-500" />
+              <span className="text-gray-700 dark:text-gray-200">Mumbai, India</span>
             </span>
           </motion.div>
 
@@ -60,7 +31,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-gray-900 dark:text-white tracking-tight"
           >
-            Hi, I'm <span className="gradient-text bg-clip-text">Gaurav Chaudhari</span>
+            Hi, I'm <span className="gradient-text">Gaurav Chaudhari</span>
           </motion.h1>
 
           <motion.div
@@ -92,7 +63,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
+            className="text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
           >
             Software Engineer specializing in <span className="font-medium text-gray-900 dark:text-white">Generative AI</span>, building high-performance inference microservices 
             and scalable voice agent pipelines. Passionate about creating AI solutions that make a real impact.
@@ -107,14 +78,14 @@ export default function Hero() {
             <a
               href="/resume.pdf"
               download="Gaurav_Chaudhari_Resume.pdf"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-xl text-white bg-primary-600 hover:bg-primary-700 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-xl text-white bg-gradient-to-r from-purple-600 to-pink-600 dark:from-yellow-300 dark:to-amber-400 dark:text-gray-900 hover:shadow-glow-lg transition-all transform hover:scale-105 shadow-xl"
             >
               <Download className="w-5 h-5 mr-2" />
               Download Resume
             </a>
             <a
               href="mailto:chaudharigaurav37@gmail.com"
-              className="inline-flex items-center px-8 py-4 border-2 border-primary-600 dark:border-primary-500 text-base font-semibold rounded-xl text-primary-600 dark:text-primary-400 bg-transparent hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-xl glass glass-hover text-purple-600 dark:text-yellow-400 transition-all transform hover:scale-105"
             >
               <Mail className="w-5 h-5 mr-2" />
               Get in Touch
@@ -123,7 +94,7 @@ export default function Hero() {
               href="https://github.com/gaurav-163"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-base font-semibold rounded-xl text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-xl glass glass-hover text-gray-700 dark:text-gray-200 transition-all transform hover:scale-105"
             >
               <Github className="w-5 h-5 mr-2" />
               GitHub
@@ -140,7 +111,7 @@ export default function Hero() {
               href="https://linkedin.com/in/gaurav-chaudhari-gc"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              className="p-3 rounded-full glass glass-hover text-purple-600 dark:text-yellow-400 transition-all"
             >
               <Linkedin className="w-6 h-6" />
             </a>
@@ -148,13 +119,13 @@ export default function Hero() {
               href="https://github.com/gaurav-163"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              className="p-3 rounded-full glass glass-hover text-gray-700 dark:text-gray-200 transition-all"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
               href="mailto:chaudharigaurav37@gmail.com"
-              className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              className="p-3 rounded-full glass glass-hover text-purple-600 dark:text-yellow-400 transition-all"
             >
               <Mail className="w-6 h-6" />
             </a>
@@ -168,7 +139,7 @@ export default function Hero() {
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
             aria-label="Scroll to about section"
           >
-            <ArrowDown className="w-8 h-8 text-gray-600 dark:text-gray-400" />
+            <ArrowDown className="w-8 h-8 text-purple-600 dark:text-yellow-400" />
           </motion.button>
         </div>
       </div>

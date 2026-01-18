@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 @layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/15;
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-xl bg-white/5 border border-white/15;
+  }
+
+  .glass-hover {
+    @apply hover:bg-white/10 hover:border-white/25 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 dark:from-yellow-300 dark:via-yellow-400 dark:to-amber-500 bg-clip-text text-transparent;
+  }
+
+  .liquid-blob {
+    animation: liquidFlow 8s ease-in-out infinite;
+  }
+
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in;
   }
@@ -20,6 +40,12 @@
   }
   .animate-gradient {
     animation: gradient 8s linear infinite;
+  }
+  .animate-liquid-shimmer {
+    animation: liquidShimmer 3s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulseGlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
 
@@ -53,17 +79,44 @@
   50% { background-position: 100% 50%; }
 }
 
+@keyframes liquidFlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes liquidShimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.3);
+  }
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 240, 249, 255;
+  --background-end-rgb: 224, 242, 254;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 15, 23, 42;
+    --background-end-rgb: 30, 41, 59;
   }
 }
 
@@ -79,12 +132,13 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(135deg, rgb(240, 249, 255) 0%, rgb(224, 242, 254) 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dark body {
+  background: linear-gradient(135deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%);
 }
 
 /* Custom scrollbar */
