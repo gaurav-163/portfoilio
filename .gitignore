@@ -40,3 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# Admin panel data and uploads
+data/portfolio.json
+public/assets/resumes/*.pdf
+public/assets/documents/*
+!public/assets/resumes/.gitkeep
+!public/assets/documents/.gitkeep
