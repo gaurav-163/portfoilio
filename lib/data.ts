@@ -20,12 +20,55 @@ export interface Document {
   category: string;
 }
 
+export interface Profile {
+  name: string;
+  title: string;
+  bio: string;
+  email: string;
+  phone: string;
+  location: string;
+  linkedin: string;
+  github: string;
+  twitter?: string;
+  website?: string;
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  technologies: string[];
+  achievements: string[];
+  period: string;
+  github?: string;
+  demo?: string;
+  image?: string;
+}
+
+export interface Experience {
+  id: string;
+  company: string;
+  position: string;
+  period: string;
+  location: string;
+  description: string;
+  responsibilities: string[];
+}
+
+export interface SkillCategory {
+  id: string;
+  name: string;
+  skills: string[];
+}
+
 export interface PortfolioData {
   resumes: Resume[];
   documents: Document[];
-  projects: any[];
-  experiences: any[];
-  skills: any[];
+  profile?: Profile;
+  projects: Project[];
+  experiences: Experience[];
+  skills: SkillCategory[];
 }
 
 export async function readData(): Promise<PortfolioData> {
@@ -39,7 +82,17 @@ export async function readData(): Promise<PortfolioData> {
       documents: [],
       projects: [],
       experiences: [],
-      skills: []
+      skills: [],
+      profile: {
+        name: 'Your Name',
+        title: 'Your Title',
+        bio: 'Your bio...',
+        email: 'your.email@example.com',
+        phone: '+1234567890',
+        location: 'Your Location',
+        linkedin: 'https://linkedin.com/in/yourprofile',
+        github: 'https://github.com/yourusername'
+      }
     };
   }
 }

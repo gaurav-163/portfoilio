@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useState, useEffect } from 'react';
 import { 
   Brain, 
   Cpu, 
@@ -13,70 +14,42 @@ import {
   MessageSquare
 } from 'lucide-react';
 
-const skillCategories = [
-  {
-    title: 'Generative AI',
-    icon: Sparkles,
-    skills: [
-      'LLM Fine-Tuning',
-      'LoRA/QLoRA',
-      'RAG',
-      'LangChain',
-      'CrewAI',
-      'Prompt Engineering (CoT)',
-    ],
-    color: 'from-purple-500 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff]',
-  },
-  {
-    title: 'Machine Learning',
-    icon: Brain,
-    skills: [
-      'PyTorch',
-      'Transformers',
-      'Scikit-Learn',
-      'Vector Search (FAISS, ChromaDB)',
-    ],
-    color: 'from-pink-500 to-purple-500 dark:from-[#8ca2ff] dark:to-[#c189ff]',
-  },
-  {
-    title: 'Multimodal AI',
-    icon: MessageSquare,
-    skills: [
-      'VAPI',
-      'Deepgram',
-      'Sarvam AI',
-      'TTS',
-      'ASR',
-    ],
-    color: 'from-purple-500 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff]',
-  },
-  {
-    title: 'Infrastructure & DevOps',
-    icon: Container,
-    skills: [
-      'Python',
-      'FastAPI',
-      'Docker',
-      'Kafka',
-      'GCP',
-      'GitHub Actions',
-    ],
-    color: 'from-pink-500 to-purple-500 dark:from-[#8ca2ff] dark:to-[#c189ff]',
-  },
-  {
-    title: 'Data & Databases',
-    icon: Database,
-    skills: [
-      'SQL',
-      'MongoDB',
-      'Pandas',
-      'NumPy',
-    ],
-    color: 'from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff]',
-  },
+const iconMap: any = {
+  'Sparkles': Sparkles,
+  'Brain': Brain,
+  'MessageSquare': MessageSquare,
+  'Container': Container,
+  'Database': Database,
+  'Cpu': Cpu,
+  'Code2': Code2,
+  'Layers': Layers,
+};
+
+const colorClasses = [
+  'from-purple-500 to-pink-500 dark:from-[#7c8cff] dark:to-[#b178ff]',
+  'from-pink-500 to-purple-500 dark:from-[#8ca2ff] dark:to-[#c189ff]',
+  'from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff]',
 ];
 
 export default function Skills() {
+  const [skillCategories, setSkillCategories] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch('/api/portfolio')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.data.skills) {
+          const skills = data.data.skills.map((cat: any, idx: number) => ({
+            ...cat,
+            title: cat.name,
+            icon: cat.icon || 'Code2',
+            color: cat.color || colorClasses[idx % colorClasses.length]
+          }));
+          setSkillCategories(skills);
+        }
+      })
+      .catch(err => console.error('Failed to load skills:', err));
+  }, []);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,

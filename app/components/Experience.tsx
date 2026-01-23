@@ -3,34 +3,21 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
-
-const experiences = [
-  {
-    company: 'Anvex AI',
-    role: 'Software Engineer ML',
-    location: 'Vashi, India',
-    period: 'Sept 2025 - Present',
-    achievements: [
-      'Architected high-performance inference microservices using FastAPI on Docker, reducing model latency by <2300ms for real-time interaction.',
-      'Engineered BoundVoice: a scalable voice agent pipeline integrating VAPI SDK and SIP Trunking to manage concurrent telephony streams with dynamic context injection.',
-      'Implemented server-grade RAG system with referencing for LLM outputs, increasing structured data extraction accuracy by 75% and eliminating hallucinated fields.',
-      'Built Anvex Voice: a moderate-grade RAG with context in real-time, reducing agent response time during live calls.',
-      'Fine-tuned SLMs and NVIDIA Parakeet TTS models on proprietary datasets, optimizing inference cost and reducing Word Error Rate (WER) for domain vocabulary.',
-    ],
-  },
-  {
-    company: 'Anvex AI',
-    role: 'AI Engineer Intern',
-    location: 'Vashi, India',
-    period: 'Jul 2025 - Sept 2025',
-    achievements: [
-      'Designed and evaluated 20+ Chain-of-Thought (CoT) prompt templates, ensuring deterministic behavior for enterprise-facing AI agents.',
-      'Optimized conversational workflows using user-level analytics, achieving a 30% uplift in engagement and a 15% reduction in call drop-offs.',
-    ],
-  },
-];
+import { useState, useEffect } from 'react';
 
 export default function Experience() {
+  const [experiences, setExperiences] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch('/api/portfolio')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.data.experiences) {
+          setExperiences(data.data.experiences);
+        }
+      })
+      .catch(err => console.error('Failed to load experiences:', err));
+  }, []);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -78,22 +65,30 @@ export default function Experience() {
                     </span>
                   </div>
                   
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    {exp.position}
+                  </h3>
+                  
                   <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-                    {exp.role}
+                    {exp.position}
                   </h3>
                   
                   <p className="text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-1">
                     <MapPin className="w-4 h-4" />
                     {exp.location}
                   </p>
+                  
+                  {exp.description && (
+                    <p className="text-gray-700 dark:text-gray-300 mb-3 text-sm">{exp.description}</p>
+                  )}
 
                   <ul className="space-y-2 text-left">
-                    {exp.achievements.map((achievement, i) => (
+                    {(exp.responsibilities || exp.achievements || []).map((item: string, i: number) => (
                       <li
                         key={i}
                         className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed"
                         dangerouslySetInnerHTML={{
-                          __html: achievement.replace(
+                          __html: item.replace(
                             /(\d+%|<\d+ms|75%|92%)/g,
                             '<span class="font-semibold text-purple-600 dark:text-[#c3d0ff]">$1</span>'
                           ),

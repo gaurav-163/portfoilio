@@ -7,6 +7,15 @@ export async function POST(request: NextRequest) {
     const adminUsername = process.env.ADMIN_USERNAME;
     const adminPassword = process.env.ADMIN_PASSWORD;
 
+    // Debug logging (remove after fixing)
+    console.log('Environment check:', {
+      hasUsername: !!adminUsername,
+      hasPassword: !!adminPassword,
+      receivedUsername: username,
+      usernameMatch: username === adminUsername,
+      passwordMatch: password === adminPassword
+    });
+
     if (username === adminUsername && password === adminPassword) {
       const response = NextResponse.json({ success: true });
       

@@ -2,55 +2,15 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ExternalLink, Github, Code2, Brain, Database, Eye } from 'lucide-react';
 
-const projects = [
-  {
-    title: 'CavScan: Deep Learning Diagnostic System',
-    category: 'Computer Vision / RAG / CrewAI',
-    icon: Eye,
-    description: 'End-to-end dental cavity detection pipeline using Vision Transformers (ViT) trained on 90K X-rays',
-    technologies: ['PyTorch', 'ViT', 'Computer Vision', 'FastAPI', 'Docker'],
-    achievements: [
-      'Developed pipeline achieving 0.04 IoU on test set',
-      'Optimized inference for edge deployment with <200ms latency',
-      'Added Grad-CAM for explainability'
-    ],
-    period: 'Jun 2024 - Mar 2025',
-    github: 'https://github.com/gaurav-chaudhari-gc',
-  },
-  {
-    title: 'Mira: Knowledge-Based RAG Assistant',
-    category: 'RAG / LangChain / Redis',
-    icon: Brain,
-    description: 'Domain-semantic RAG pipeline utilizing hybrid search (Dense + Keyword) to retrieve context from unstructured PDFs and handwritten notes',
-    technologies: ['ChromaDB', 'LangChain', 'Hybrid Search', 'OCR'],
-    achievements: [
-      'Engineered Dense + Keyword hybrid search',
-      'Integrated Cross-Encoder Reranking to filter context',
-      'Reduced hallucination by ensuring high context relevance',
-      'Deployed retrieval microservice using FastAPI with <100ms latency'
-    ],
-    period: 'Jan 2025 - Feb 2025',
-    github: 'https://github.com/gaurav-chaudhari-gc',
-  },
-  {
-    title: 'Real-Time Sentiment Analyzer',
-    category: 'NLP / REST API',
-    icon: Code2,
-    description: 'Fine-tuned RoBERTa on 50K tweets for multi-class sentiment analysis',
-    technologies: ['RoBERTa', 'NLP', 'REST API'],
-    achievements: [
-      'Achieved 92% accuracy',
-      'Deployed via scalable REST API'
-    ],
-    period: 'Apr 2023 - Oct 2023',
-    github: 'https://github.com/gaurav-chaudhari-gc',
-  },
-];
-
-const categories = ['All', 'Computer Vision', 'RAG / LangChain', 'NLP / REST API'];
+const iconMap: any = {
+  'Eye': Eye,
+  'Brain': Brain,
+  'Code2': Code2,
+  'Database': Database,
+};
 
 export default function Projects() {
   const [ref, inView] = useInView({
@@ -58,6 +18,22 @@ export default function Projects() {
     threshold: 0.1,
   });
   const [activeCategory, setActiveCategory] = useState('All');
+  const [projects, setProjects] = useState<any[]>([]);
+  const [categories, setCategories] = useState<string[]>(['All']);
+
+  useEffect(() => {
+    fetch('/api/portfolio')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.data.projects) {
+          setProjects(data.data.projects);
+          // Extract unique categories
+          const cats = ['All', ...new Set(data.data.projects.map((p: any) => p.category))];
+          setCategories(cats as string[]);
+        }
+      })
+      .catch(err => console.error('Failed to load projects:', err));
+  }, []);
 
   const filteredProjects = activeCategory === 'All' 
     ? projects 
@@ -99,75 +75,102 @@ export default function Projects() {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => {
-              const Icon = project.icon;
+              const IconComponent = iconMap[project.icon] || Code2;
+              
               return (
                 <motion.div
-                  key={index}
+                  key={project.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="glass-card glass-card-hover rounded-2xl overflow-hidden border-0 group transition-all"
+                  className="glass glass-hover rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-all duration-300"
                 >
                   <div className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 bg-gradient-to-br from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] rounded-lg group-hover:scale-110 transition-transform shadow-lg">
-                        <Icon className="w-6 h-6 text-white dark:text-gray-900" />
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-3 rounded-xl bg-gradient-to-br from-purple-600/20 to-pink-600/20 dark:from-[#7c8cff]/20 dark:to-[#b178ff]/20">
+                        <IconComponent className="w-6 h-6 text-purple-600 dark:text-[#7c8cff]" />
                       </div>
-                      <div className="flex gap-2">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 rounded-lg glass glass-hover transition-all"
-                        >
-                          <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                        </a>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                          {project.title}
+                        </h3>
+                        <p className="text-sm text-purple-600 dark:text-[#7c8cff]">
+                          {project.category}
+                        </p>
                       </div>
                     </div>
 
-                    <span className="inline-block px-3 py-1 rounded-full glass text-purple-700 dark:text-[#c3d0ff] text-xs font-semibold mb-3">
-                      {project.category}
-                    </span>
-
-                    <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-[#c3d0ff] transition-colors">
-                      {project.title}
-                    </h3>
-
-                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-300 mb-4 line-clamp-2">
                       {project.description}
                     </p>
 
                     <div className="mb-4">
-                      <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">Key Achievements:</h4>
-                      <ul className="space-y-1">
-                        {project.achievements.map((achievement, i) => (
-                          <li key={i} className="text-xs text-gray-700 dark:text-gray-300 flex items-start">
-                            <span className="text-purple-600 dark:text-[#c3d0ff] mr-2">•</span>
-                            <span>{achievement}</span>
-                          </li>
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                        Key Technologies:
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies?.map((tech: string, i: number) => (
+                          <span
+                            key={i}
+                            className="px-3 py-1 text-xs rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mb-4">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                        Achievements:
+                      </p>
+                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                        {project.achievements?.map((achievement: string, i: number) => (
+                          <li key={i} className="line-clamp-1">{achievement}</li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="px-2 py-1 glass text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                        {project.period}
+                      </span>
+                      <div className="flex gap-2">
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                          </a>
+                        )}
+                        {project.demo && (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <ExternalLink className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                          </a>
+                        )}
+                      </div>
                     </div>
-
-                    <p className="text-xs text-gray-600 dark:text-gray-400">
-                      {project.period}
-                    </p>
                   </div>
                 </motion.div>
               );
             })}
           </div>
+
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 dark:text-gray-400">No projects found in this category.</p>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
