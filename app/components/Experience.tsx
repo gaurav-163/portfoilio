@@ -69,10 +69,6 @@ export default function Experience() {
                     {exp.position}
                   </h3>
                   
-                  <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-                    {exp.position}
-                  </h3>
-                  
                   <p className="text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-1">
                     <MapPin className="w-4 h-4" />
                     {exp.location}
