@@ -92,7 +92,7 @@ export default function Skills() {
                   </div>
 
                   <div className="space-y-2">
-                    {category.skills.map((skill, i) => (
+                    {category.skills.map((skill: string, i: number) => (
                       <motion.div
                         key={i}
                         initial={{ opacity: 0, x: -20 }}

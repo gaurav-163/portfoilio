@@ -353,24 +353,24 @@ export default function AdminPage() {
         {activeTab === 'projects' && portfolioData && (
           <ProjectsManager
             projects={portfolioData.projects || []}
-            onSave={(data) => saveSection('projects', data)}
-            onDelete={(id) => deleteItem('projects', id)}
+            onSave={(data: any) => saveSection('projects', data)}
+            onDelete={(id: string) => deleteItem('projects', id)}
           />
         )}
 
         {activeTab === 'experience' && portfolioData && (
           <ExperienceManager
             experiences={portfolioData.experiences || []}
-            onSave={(data) => saveSection('experiences', data)}
-            onDelete={(id) => deleteItem('experiences', id)}
+            onSave={(data: any) => saveSection('experiences', data)}
+            onDelete={(id: string) => deleteItem('experiences', id)}
           />
         )}
 
         {activeTab === 'skills' && portfolioData && (
           <SkillsManager
             skills={portfolioData.skills || []}
-            onSave={(data) => saveSection('skills', data)}
-            onDelete={(id) => deleteItem('skills', id)}
+            onSave={(data: any) => saveSection('skills', data)}
+            onDelete={(id: string) => deleteItem('skills', id)}
           />
         )}
 

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // Only protect admin routes
   if (request.nextUrl.pathname.startsWith('/admin')) {
     const authCookie = request.cookies.get('admin-auth');
