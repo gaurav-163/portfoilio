@@ -1,10 +1,20 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Github, Linkedin, Mail, MapPin, ArrowDown, Download } from 'lucide-react';
 
 export default function Hero() {
+  const [resumeFile, setResumeFile] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('/api/resume')
+      .then(res => res.json())
+      .then(data => setResumeFile(data.filename))
+      .catch(() => {});
+  }, []);
+
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -76,8 +86,8 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
             <a
-              href="/resume.pdf"
-              download="Gaurav_Chaudhari_Resume.pdf"
+              href={resumeFile ? `/resume/${resumeFile}` : '#'}
+              download={resumeFile || undefined}
               className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-2xl text-white bg-gradient-to-r from-purple-600 to-pink-600 dark:from-[#7c8cff] dark:to-[#b178ff] dark:text-gray-900 hover:shadow-glow-lg transition-all transform hover:scale-105 shadow-xl backdrop-blur-sm"
             >
               <Download className="w-5 h-5 mr-2" />

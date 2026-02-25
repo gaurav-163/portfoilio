@@ -11,21 +11,21 @@ const projects = [
     category: 'Computer Vision / RAG / CrewAI',
     icon: Eye,
     description: 'End-to-end dental cavity detection pipeline using Vision Transformers (ViT) trained on 90K X-rays',
-    technologies: ['PyTorch', 'ViT', 'Computer Vision', 'FastAPI', 'Docker'],
+    technologies: ['PyTorch', 'ViT', 'Computer Vision', 'FastAPI'],
     achievements: [
       'Developed pipeline achieving 0.04 IoU on test set',
       'Optimized inference for edge deployment with <200ms latency',
       'Added Grad-CAM for explainability'
     ],
     period: 'Jun 2024 - Mar 2025',
-    github: 'https://github.com/gaurav-chaudhari-gc',
+    github: 'https://github.com/gaurav-163/CavScan-Intelligent-Diagnostic-System',
   },
   {
     title: 'Mira: Knowledge-Based RAG Assistant',
     category: 'RAG / LangChain / Redis',
     icon: Brain,
     description: 'Domain-semantic RAG pipeline utilizing hybrid search (Dense + Keyword) to retrieve context from unstructured PDFs and handwritten notes',
-    technologies: ['ChromaDB', 'LangChain', 'Hybrid Search', 'OCR'],
+    technologies: ['Python', 'ChromaDB', 'LangChain', 'Hybrid Search', 'OCR', 'Redis', 'FastAPI'],
     achievements: [
       'Engineered Dense + Keyword hybrid search',
       'Integrated Cross-Encoder Reranking to filter context',
@@ -33,20 +33,22 @@ const projects = [
       'Deployed retrieval microservice using FastAPI with <100ms latency'
     ],
     period: 'Jan 2025 - Feb 2025',
-    github: 'https://github.com/gaurav-chaudhari-gc',
+    github: 'https://github.com/gaurav-163/Mira',
   },
   {
-    title: 'Real-Time Sentiment Analyzer',
+    title: 'News Recommender System',
     category: 'NLP / REST API',
     icon: Code2,
-    description: 'Fine-tuned RoBERTa on 50K tweets for multi-class sentiment analysis',
-    technologies: ['RoBERTa', 'NLP', 'REST API'],
+    description: 'Machine learning-based application that suggests relevant news articles using transformer embeddings and FAISS similarity search',
+    technologies: ['FAISS', 'Flask', 'Sentence Transformers', 'Python'],
     achievements: [
-      'Achieved 92% accuracy',
-      'Deployed via scalable REST API'
+      'Uses Sentence Transformers for text embeddings',
+      'Implements FAISS for efficient similarity search',
+      'Provides Flask-based user interface',
+      'Supports diverse and expanding news topics'
     ],
-    period: 'Apr 2023 - Oct 2023',
-    github: 'https://github.com/gaurav-chaudhari-gc',
+    period: '2024',
+    github: 'https://github.com/gaurav-163/News-Recommender-system',
   },
 ];
 

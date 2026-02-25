@@ -47,22 +47,16 @@ export default function About() {
                 Transforming Ideas into Intelligent Solutions
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                I'm a passionate Software Engineer at <span className="font-semibold text-purple-600 dark:text-[#a7b5ff]">Anvex AI</span>, 
-                specializing in cutting-edge AI/ML technologies. With expertise in building high-performance inference 
-                microservices using FastAPI and Docker, I've successfully reduced model latency by up to 
-                <span className="inline-block px-2 py-0.5 mx-1 bg-purple-200/50 dark:bg-indigo-900/30 text-purple-700 dark:text-[#c3d0ff] rounded font-semibold">2300ms</span> for real-time interactions.
+                I am an AI-focused Software Engineer with 6 months of professional experience and 3 months of internship experience at <span className="font-semibold text-purple-600 dark:text-[#a7b5ff]">Anvex AI</span>, working on real-world AI/ML systems and production deployments.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                My work spans across various AI domains including <span className="font-semibold text-gray-900 dark:text-white">LLM Fine-Tuning</span>, 
-                <span className="font-semibold text-gray-900 dark:text-white"> RAG systems</span>, <span className="font-semibold text-gray-900 dark:text-white">Voice AI</span>, and 
-                <span className="font-semibold text-gray-900 dark:text-white"> Computer Vision</span>. I've implemented server-grade RAG systems that 
-                increased extraction accuracy by <span className="inline-block px-2 py-0.5 mx-1 bg-green-100/50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded font-semibold">75%</span> 
-                and fine-tuned models achieving <span className="inline-block px-2 py-0.5 mx-1 bg-blue-100/50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded font-semibold">92% accuracy</span>.
+                I have hands-on experience building inference APIs using FastAPI and Docker, optimizing model performance and reducing latency for real-time AI applications. My work includes contributing to LLM fine-tuning, RAG pipelines, and Voice AI systems, where I improved extraction accuracy by up to <span className="inline-block px-2 py-0.5 mx-1 bg-green-100/50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded font-semibold">75%</span> and fine-tuned transformer models achieving <span className="inline-block px-2 py-0.5 mx-1 bg-blue-100/50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded font-semibold">92% accuracy</span> in multi-class tasks.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Currently pursuing my B.E. in <span className="font-semibold text-gray-900 dark:text-white">Artificial Intelligence and Data Science</span> 
-                from New Horizon Institute, I'm constantly pushing the boundaries of what's possible with AI, 
-                having won <span className="inline-block px-2 py-0.5 mx-1 bg-purple-200/50 dark:bg-indigo-900/30 text-purple-700 dark:text-[#c3d0ff] rounded font-semibold">1st place</span> in a LLM Fine-Tuning Hackathon.
+                I hold a B.E. in Artificial Intelligence and Data Science from New Horizon Institute of Technology & Management, Thane, and secured <span className="inline-block px-2 py-0.5 mx-1 bg-purple-200/50 dark:bg-indigo-900/30 text-purple-700 dark:text-[#c3d0ff] rounded font-semibold">1st place</span> in an LLM Fine-Tuning Hackathon, demonstrating strong fundamentals and practical problem-solving skills.
+              </p>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                As a fresher, I am highly motivated to grow in advanced AI systems, LLM engineering, and scalable backend architectures, while delivering measurable impact through efficient and well-engineered solutions.
               </p>
             </motion.div>
 
@@ -90,7 +84,7 @@ export default function About() {
                   <div>
                     <h4 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Achievements</h4>
                     <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                      🏆 1st Place - LablabAI Fine-Tuning Hackathon (LLM Optimization)
+                      🏆 1st Place - LLM Fine-Tuning Hackathon
                       <br />
                       🎓 Head Technical Secretary, Student Association
                     </p>
