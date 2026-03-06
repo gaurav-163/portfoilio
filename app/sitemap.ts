@@ -34,13 +34,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/skills`,
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/certificates`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 0.7,
+      priority: 0.8,
     },
   ];
 }
